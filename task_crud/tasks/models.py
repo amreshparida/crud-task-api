@@ -1,5 +1,6 @@
 from django.db import models
 
+# our task table model
 class Task(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()

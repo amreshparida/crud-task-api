@@ -38,11 +38,18 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
-    'tasks',
+    'rest_framework', #rest faremwork using
+    'tasks', #our task app
 ]
 
 
+# Rest framework
+
+REST_FRAMEWORK = {
+    'DEFAULT_THROTTLE_RATES': {
+        'user': '100/minute',  # 100 request per minute rate limit
+    },
+}
 
 
 
@@ -54,6 +61,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'tasks.middleware.APIKeyMiddleware',
 ]
 
 ROOT_URLCONF = 'task_crud.urls'
@@ -129,4 +137,4 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-APPEND_SLASH = False
+APPEND_SLASH = False #append slash has set to false
