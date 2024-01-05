@@ -5,10 +5,10 @@ Django REST API to manage a Task entity with CRUD (Create, Read, Update, Delete)
 
 API Endpoints
 List and Create Tasks
-URL: /api/tasks/
+URL: /api/v1/tasks/
 Method: GET (List all tasks), POST (Create a new task)
 Retrieve, Update, and Delete a Specific Task
-URL: /api/tasks/<int:pk>/
+URL: /api/v1/tasks/<int:pk>/
 Method: GET (Retrieve), PUT (Update), DELETE (Delete)
 
 
