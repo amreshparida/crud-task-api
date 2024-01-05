@@ -4,21 +4,34 @@ Django REST API to manage a Task entity with CRUD (Create, Read, Update, Delete)
 
 
 API Endpoints
+
 List and Create Tasks
-URL: /api/tasks/
+
+URL: /api/v1/tasks/
+
 Method: GET (List all tasks), POST (Create a new task)
+
 Retrieve, Update, and Delete a Specific Task
-URL: /api/tasks/<int:pk>/
+
+URL: /api/v1/tasks/<int:pk>/
+
 Method: GET (Retrieve), PUT (Update), DELETE (Delete)
 
 
 Project Structure
+
 task_manager/: Django project directory
+
 tasks/: Django app directory
+
 models.py: Task model definition
+
 serializers.py: Task model serializer
+
 views.py: Views for handling API endpoints
+
 urls.py: URL patterns for the app
+
 tests.py: Unit tests for the API
 
 Database: SQLite (configured in settings.py)
@@ -34,6 +47,8 @@ Database: SQLite (configured in settings.py)
    pip install -r requirements.txt
    python manage.py migrate
    python manage.py runserver
+   python manage.py test tasks.tests
+
 
 
   
